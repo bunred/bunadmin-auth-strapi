@@ -19,6 +19,7 @@ import BunField from "@/components/Formik/BunField"
 import { Values } from "./types"
 import { useRouter } from "next/router"
 import { Primary } from "@/core/auth/schema"
+import { useTranslation } from "react-i18next"
 
 function Copyright() {
   return (
@@ -34,6 +35,7 @@ function Copyright() {
 }
 
 export default function SignInContainer() {
+  const { t } = useTranslation("plugins")
   const router = useRouter()
   const classes = useStyles()
 
@@ -41,7 +43,7 @@ export default function SignInContainer() {
     values: Values,
     { setSubmitting }: { setSubmitting: (isSubmitting: boolean) => void }
   ) => {
-    await submitController({ values, setSubmitting, router })
+    await submitController({ t, values, setSubmitting, router })
   }
 
   return (
@@ -56,7 +58,7 @@ export default function SignInContainer() {
                 <LockOutlinedIcon />
               </Avatar>
               <Typography component="h1" variant="h5">
-                Sign in
+                {t("Sign in")}
               </Typography>
               <div className={classes.form}>
                 <Formik
@@ -64,7 +66,7 @@ export default function SignInContainer() {
                     username: "",
                     password: ""
                   }}
-                  validate={validateController}
+                  validate={values => validateController(values, t)}
                   onSubmit={handleOnSubmit}
                 >
                   {({ submitForm, isSubmitting }) => (
@@ -73,7 +75,7 @@ export default function SignInContainer() {
                         component={TextField}
                         name={Primary}
                         type="text"
-                        label="Username"
+                        label={t("Username")}
                         variant="outlined"
                         margin="normal"
                         fullWidth
@@ -81,7 +83,7 @@ export default function SignInContainer() {
                       <BunField
                         component={TextField}
                         type="password"
-                        label="Password"
+                        label={t("Password")}
                         name="password"
                         variant="outlined"
                         margin="normal"
@@ -89,7 +91,7 @@ export default function SignInContainer() {
                       />
                       <FormControlLabel
                         control={<Checkbox value="remember" color="primary" />}
-                        label="Remember me"
+                        label={t("Remember me")}
                       />
                       {isSubmitting && <LinearProgress />}
                       <Button
@@ -101,7 +103,7 @@ export default function SignInContainer() {
                         disabled={isSubmitting}
                         onClick={submitForm}
                       >
-                        Sign In
+                        {t("Sign in")}
                       </Button>
                     </Form>
                   )}
@@ -109,12 +111,12 @@ export default function SignInContainer() {
                 <Grid container>
                   <Grid item xs>
                     <Link href="#" variant="body2">
-                      Forgot password?
+                      {t("Forgot password?")}
                     </Link>
                   </Grid>
                   <Grid item>
                     <Link href="#" variant="body2">
-                      {"Don't have an account? Sign Up"}
+                      {t("Don't have an account? Sign Up")}
                     </Link>
                   </Grid>
                 </Grid>

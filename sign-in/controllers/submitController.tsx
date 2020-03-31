@@ -8,14 +8,21 @@ import { Primary } from "@/core/auth/schema"
 import { DynamicRoute } from "@/utils/routes"
 import { NextRouter } from "next/router"
 import { notice } from "@/core"
+import { TFunction } from "i18next"
 
 interface Props {
+  t: TFunction
   values: Values
   setSubmitting: (isSubmitting: boolean) => void
   router: NextRouter
 }
 
-const submitController = async ({ values, setSubmitting, router }: Props) => {
+const submitController = async ({
+  t,
+  values,
+  setSubmitting,
+  router
+}: Props) => {
   const res = await userSignInService(values)
   setSubmitting(false)
   // Sign-in successfully
@@ -40,7 +47,7 @@ const submitController = async ({ values, setSubmitting, router }: Props) => {
       updated_at: Date.now()
     })
     // show notice
-    await notice({ title: `Sign in successful` })
+    await notice({ title: t("Sign in successful") })
     // push to origin url
     const { asPath } = router
     const pathArr = asPath.split("?redirect=")
@@ -58,7 +65,7 @@ const submitController = async ({ values, setSubmitting, router }: Props) => {
   } else {
     // show notice
     await notice({
-      title: `Sign in failed`,
+      title: t("Sign in failed"),
       severity: "error",
       content: JSON.stringify(res)
     })
