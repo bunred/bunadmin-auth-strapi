@@ -20,13 +20,14 @@ import { Values } from "./types"
 import { useRouter } from "next/router"
 import { Primary } from "@/core/auth/schema"
 import { useTranslation } from "react-i18next"
+import { ENV } from "@/utils/config"
 
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {"Copyright © "}
-      <Link color="inherit" href="http://www.bunadmin.com/">
-        BunAdmin
+      <Link color="inherit" href="#">
+        {ENV.SITE_NAME}
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
