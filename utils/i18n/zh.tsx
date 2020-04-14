@@ -11,3 +11,11 @@ export const plugins = {
   "Username must be at least 3 characters long.": "用户名需大于3位字符",
   "Passwords must be at least 6 characters long.": "密码需要大于6为字符"
 }
+
+// i18n namespace: table
+export const table = {
+  Users: "用户",
+  admin: "超级管理员",
+  user: "普通用户",
+  droid: "卓德"
+}

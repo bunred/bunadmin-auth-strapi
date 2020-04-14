@@ -13,3 +13,11 @@ export const plugins = {
   "Passwords must be at least 6 characters long.":
     "Passwords must be at least 6 characters long."
 }
+
+// i18n namespace: table
+export const table = {
+  Users: "Users",
+  admin: "Administrator",
+  user: "User",
+  droid: "Droid"
+}

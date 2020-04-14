@@ -16,12 +16,11 @@ export default {
         {
           team: "buncms",
           group: "user",
-          name: "user",
+          name: "list",
           label: "User",
-          columns:
-            '[{"title":"Id","field":"id"},{"title":"Username","field":"username"},{"title":"Email","field":"email"},{"title":"Role","field":"role"},{"title":"Created At","field":"created_at"},{"title":"Updated At","field":"updated_at"}]',
+          columns: '[{"title":"Id","field":"id"}]',
           created_at,
-          customized: false,
+          customized: true,
           id: "user"
         },
         {
@@ -42,9 +41,9 @@ export default {
         {
           rank: "0",
           label: "User",
-          slug: "/user/user",
+          slug: "/user/list",
           parent: "",
-          name: "user",
+          name: "list",
           icon_type: "eva",
           icon: "people-outline",
           id: "buncms_user"
