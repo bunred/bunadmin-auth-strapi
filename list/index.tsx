@@ -19,7 +19,7 @@ export default function() {
       <CommonTable
         tableRef={tableRef}
         title={t(SchemaLabel)}
-        columns={SchemaColumns({ t, tableRef })}
+        columns={SchemaColumns({ t })}
         // style
         style={DefaultProps.style}
         // icons
