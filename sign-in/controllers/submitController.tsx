@@ -1,5 +1,5 @@
 import { Values } from "../types"
-import userSignInService from "@/services/user/signInService"
+import userSignInService from "../services/signInService"
 
 import rxDb from "@/utils/database/rxConnect"
 import { Collection as Setting } from "@/core/setting/collections"
