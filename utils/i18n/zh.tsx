@@ -17,5 +17,7 @@ export const table = {
   Users: "用户",
   admin: "超级管理员",
   user: "普通用户",
-  droid: "卓德"
+  droid: "卓德",
+  Blocked: "已锁定",
+  Confirmed: "已确认"
 }

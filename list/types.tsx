@@ -5,5 +5,12 @@ export default interface Values {
   username: string
   email: string
   password: string
-  role: string
+  confirmed: boolean
+  blocked: boolean
+  provider: string
+  role: {
+    id: number
+    name: string
+    type: string
+  }
 }

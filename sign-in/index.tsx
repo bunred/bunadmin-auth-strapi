@@ -18,7 +18,6 @@ import submitController from "./controllers/submitController"
 import BunField from "@/components/Formik/BunField"
 import { Values } from "./types"
 import { useRouter } from "next/router"
-import { Primary } from "@/core/auth/schema"
 import { useTranslation } from "react-i18next"
 import { ENV } from "@/utils/config"
 
@@ -64,7 +63,7 @@ export default function SignInContainer() {
               <div className={classes.form}>
                 <Formik
                   initialValues={{
-                    username: "",
+                    identifier: "",
                     password: ""
                   }}
                   validate={values => validateController(values, t)}
@@ -74,7 +73,7 @@ export default function SignInContainer() {
                     <Form>
                       <BunField
                         component={TextField}
-                        name={Primary}
+                        name="identifier"
                         type="text"
                         label={t("Username")}
                         variant="outlined"

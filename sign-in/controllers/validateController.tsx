@@ -4,10 +4,10 @@ import { TFunction } from "i18next"
 export default function validateController(values: Values, t: TFunction) {
   const errors: Partial<Values> = {}
   // email
-  if (!values.username) {
-    errors.username = "Required"
-  } else if (values.username.length < 3) {
-    errors.username = t("Username must be at least 3 characters long.")
+  if (!values.identifier) {
+    errors.identifier = "Required"
+  } else if (values.identifier.length < 3) {
+    errors.identifier = t("Username must be at least 3 characters long.")
   }
   // password
   if (!values.password) {

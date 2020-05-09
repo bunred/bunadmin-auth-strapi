@@ -26,7 +26,7 @@ const submitController = async ({
   const res = await userSignInService(values)
   setSubmitting(false)
   // Sign-in successfully
-  if (res && res.token) {
+  if (res && res.jwt && res.user) {
     // store user profile
     const primary = Primary
     const updated_at = Date.now()
@@ -34,16 +34,16 @@ const submitController = async ({
     const db = await rxDb()
     // store auth
     await db[Auth.name].upsert({
-      [primary]: res.username,
-      token: res.token,
-      role: res.role,
+      [primary]: res.user.username,
+      token: res.jwt,
+      role: res.user.role.name,
       details: JSON.stringify(res),
       updated_at
     })
     // update username in setting
     await db[Setting.name].upsert({
       name: Primary,
-      value: res[Primary],
+      value: res.user.username,
       updated_at: Date.now()
     })
     // show notice

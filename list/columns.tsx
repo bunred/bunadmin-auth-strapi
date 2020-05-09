@@ -16,9 +16,21 @@ export default ({ t }: { t: TFunction }) =>
       field: "role",
       width: 135,
       render: r => {
-        const role = r.role.replace("buncms_", "")
+        const role = r.role && r.role.name
         return t(role)
       }
+    },
+    {
+      title: t("Blocked"),
+      field: "blocked",
+      type: "boolean",
+      width: 135
+    },
+    {
+      title: t("Confirmed"),
+      field: "confirmed",
+      type: "boolean",
+      width: 135
     },
     {
       title: t("Created At"),

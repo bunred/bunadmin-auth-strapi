@@ -6,9 +6,9 @@ async function verify(): Promise<any> {
   const token = await storedToken()
 
   // query remote user with token
-  return request("/auth/me", {
+  return request("/users/me", {
     prefix: ENV.AUTH_URL,
-    method: "POST",
+    method: "GET",
     headers: {
       Authorization: `Bearer ${token}`
     }

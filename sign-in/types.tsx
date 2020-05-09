@@ -1,4 +1,4 @@
 export interface Values {
-  username: string
+  identifier: string
   password: string
 }

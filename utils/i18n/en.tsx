@@ -19,5 +19,7 @@ export const table = {
   Users: "Users",
   admin: "Administrator",
   user: "User",
-  droid: "Droid"
+  droid: "Droid",
+  Blocked: "Blocked",
+  Confirmed: "Confirmed"
 }
