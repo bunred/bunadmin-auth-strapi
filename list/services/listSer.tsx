@@ -36,6 +36,6 @@ export default async function listSer(query: Query<any>) {
   return {
     data,
     totalCount: count,
-    errors: data.errors ? "Fetch error" : undefined
+    errors: data.status >= 400 ? "Fetch error" : undefined
   }
 }
