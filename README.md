@@ -1,11 +1,11 @@
-# bunadmin-plugin-buncms-strapi-user
+# bunadmin-plugin-strapi-user
 [This plugin needs to be used in BunAdmin](https://github.com/bunred/bunadmin)
 
 ### How to use
 
+copy object from [bunadmin-plugins](https://github.com/bunred/bunadmin-plugins/blob/master/navigation/authentication/bunred/bunadmin-plugin-strapi-user.json) into array (:bunadmin/plugins-info.json)
 ```
-cd [bunadmin path]/plugins/
-git clone https://github.com/bunred/bunadmin-plugin-buncms-strapi-user.git buncms-user
+node plugins-update.js
 ```
 
 Get ready to get Strapi up and running in less than 5 minutes 🚀.
