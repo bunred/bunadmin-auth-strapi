@@ -2,7 +2,7 @@
  * Remote data controller
  */
 import { Query } from "material-table"
-import { notice } from "@/core"
+import { notice } from "@bunred/bunadmin"
 import listSer from "../services/listSer"
 
 export default async function dataCtrl(query: Query<any>) {

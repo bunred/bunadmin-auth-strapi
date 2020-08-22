@@ -1,6 +1,4 @@
-import request from "@/utils/scripts/request"
-import storedToken from "@/utils/scripts/storedToken"
-import { ENV } from "@/utils/config"
+import { request, storedToken, ENV } from "@bunred/bunadmin"
 
 async function verify(): Promise<any> {
   const token = await storedToken()

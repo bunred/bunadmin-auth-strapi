@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from "react"
 import { NextRouter } from "next/router"
 import verify from "./verify"
-import { DynamicRoute, UserRoute } from "@/utils/routes"
+import { DynamicRoute, UserRoute } from "@bunred/bunadmin"
 
 const delayMS = 600 // (ms) delay for animation
 

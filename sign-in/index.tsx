@@ -11,15 +11,13 @@ import Typography from "@material-ui/core/Typography"
 import { Form, Formik } from "formik"
 import { TextField } from "formik-material-ui"
 import { Grow, LinearProgress } from "@material-ui/core"
-import AnimatedRandomBG from "@/components/CommonBgs/AnimatedRandomBG"
 import validateController from "./controllers/validateController"
 import useStyles from "./styles"
 import submitController from "./controllers/submitController"
-import BunField from "@/components/Formik/BunField"
 import { Values } from "./types"
 import { useRouter } from "next/router"
 import { useTranslation } from "react-i18next"
-import { ENV } from "@/utils/config"
+import { ENV, BunField, AnimatedRandomBG } from "@bunred/bunadmin"
 
 function Copyright() {
   return (

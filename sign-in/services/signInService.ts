@@ -1,5 +1,4 @@
-import { ENV } from "@/utils/config"
-import request from "@/utils/scripts/request"
+import { ENV, request } from "@bunred/bunadmin"
 
 export interface SignInParamsType {
   identifier: string

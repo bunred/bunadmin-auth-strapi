@@ -1,13 +1,15 @@
 import { Values } from "../types"
 import userSignInService from "../services/signInService"
 
-import rxDb from "@/utils/database/rxConnect"
-import { Collection as Setting } from "@/core/setting/collections"
-import { Collection as Auth } from "@/core/auth/collections"
-import { Primary } from "@/core/auth/schema"
-import { DynamicRoute } from "@/utils/routes"
+import {
+  rxDb,
+  Setting,
+  Auth,
+  AuthPrimary as Primary,
+  DynamicRoute,
+  notice
+} from "@bunred/bunadmin"
 import { NextRouter } from "next/router"
-import { notice } from "@/core"
 import { TFunction } from "i18next"
 
 interface Props {

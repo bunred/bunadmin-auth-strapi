@@ -17,7 +17,7 @@ export default ({ t }: { t: TFunction }) =>
       width: 135,
       render: r => {
         const role = r.role && r.role.name
-        return t(role)
+        return role && t(role)
       }
     },
     {
