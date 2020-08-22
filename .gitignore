@@ -3,3 +3,7 @@
 
 # Idea
 /.idea/workspace.xml
+
+# BunAdmin
+dist
+*.tgz

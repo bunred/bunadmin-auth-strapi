@@ -1,7 +1,21 @@
 {
-  "name": "buncms-user",
-  "version": "1.0.0-alpha.1",
+  "name": "bunadmin-plugin-strapi-user",
+  "version": "1.0.1-alpha.1",
   "license": "Apache-2.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "dependencies": {
+    "@bunred/bunadmin": "^1.1.0-alpha.5"
+  },
+  "devDependencies": {
+    "prettier": "1.19.1",
+    "typescript": "^3.9.3"
+  },
+  "scripts": {
+    "test": "prettier --check --no-semi src/** pages/** test/** && jest",
+    "pack": "rm -rf dist && tsc && npm pack"
   }
 }
