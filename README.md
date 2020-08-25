@@ -1,10 +1,18 @@
-# bunadmin-plugin-strapi-user
+# bunadmin-auth-strapi
 [This plugin needs to be used in BunAdmin](https://github.com/bunred/bunadmin)
 
 ### How to use
 
-copy object from [bunadmin-plugins](https://github.com/bunred/bunadmin-plugins/blob/master/navigation/authentication/bunred/bunadmin-plugin-strapi-user.json) into array (:bunadmin/plugins-info.json)
 ```
+yarn add bunadmin-auth-strapi
+
+# append to plugins-info.json
+  {
+    "enable": true,
+    "plugin-id": "bunadmin-auth-strapi",
+    "plugin-folder": "buncms-user"
+  },
+
 node plugins-update.js
 ```
 
@@ -31,3 +39,12 @@ Add a new user set role to Reviewer.
 
 Now login with it in bunadmin, you can see:
 ![ae00c8f12422a934ff717be65472995c.png](https://miro.medium.com/max/1400/1*qnGd0QK_YLQ9wBI3h4uBSg.png)
+
+---
+### Develop (hot reloading)
+```
+git clone https://github.com/bunred/bunadmin
+cd bunadmin/plugins
+git clone https://github.com/bunred/bunadmin-auth-strapi buncms-user
+yarn && yarn dev
+```
