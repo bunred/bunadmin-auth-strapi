@@ -10,11 +10,16 @@ export default ({ t }: { t: TFunction }) =>
       editable: "never"
     },
     { title: t("Username"), field: "username", width: 135 },
+    { title: t("Password"), field: "password", width: 135 },
     { title: t("Email"), field: "email", width: 135 },
     {
       title: t("Role"),
       field: "role",
       width: 135,
+      lookup: {
+        1: "Authenticated",
+        2: "Public"
+      },
       render: r => {
         const role = r.role && r.role.name
         return role && t(role)

@@ -16,8 +16,12 @@ import useStyles from "./styles"
 import submitController from "./controllers/submitController"
 import { Values } from "./types"
 import { useRouter } from "next/router"
-import { useTranslation } from "react-i18next"
-import { ENV, BunField, AnimatedRandomBG } from "@bunred/bunadmin"
+import {
+  ENV,
+  BunField,
+  AnimatedRandomBG,
+  useTranslation
+} from "@bunred/bunadmin"
 
 function Copyright() {
   return (

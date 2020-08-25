@@ -32,7 +32,8 @@ export default function() {
         // options
         options={{
           ...DefaultProps.options,
-          filtering: true
+          filtering: true,
+          selection: false
         }}
         // data
         data={async query => await dataCtrl(query)}
