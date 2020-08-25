@@ -1,5 +1,5 @@
 {
-  "name": "bunadmin-plugin-strapi-user",
+  "name": "bunadmin-auth-strapi",
   "version": "1.0.1-alpha.1",
   "license": "Apache-2.0",
   "main": "dist/index.js",
@@ -8,7 +8,7 @@
     "dist"
   ],
   "dependencies": {
-    "@bunred/bunadmin": "^1.1.0-alpha.5"
+    "@bunred/bunadmin": "^1.1.0-beta.1"
   },
   "devDependencies": {
     "prettier": "1.19.1",
@@ -16,6 +16,6 @@
   },
   "scripts": {
     "test": "prettier --check --no-semi src/** pages/** test/** && jest",
-    "pack": "rm -rf dist && tsc && npm pack"
+    "pack": "rm -rf dist & tsc && npm pack"
   }
 }
